@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# lxsh: A minimal POSIX-compliant shell for a custom Linux distribution
+# lxsh: A minimal POSIX-compliant shell for a LXOS distribution
 
 # Initialize configuration and directories
 CONFIG_DIR="$HOME/.config/lxsh"
