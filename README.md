@@ -10,11 +10,11 @@
 <div align="center">
   <h1 style="font-size: 48px; margin-top: 20px;">
     <a href="https://learnixos.github.io/" style="text-decoration: none; color: inherit;">
-      LXSH
+      𝗟𝗫𝗦𝗛
     </a>
   </h1>
   <p style="font-size: 18px; margin-top: 10px;">
-    A minimal shell for the LXOS Distribution
+    𝗔 𝗺𝗶𝗻𝗶𝗺𝗮𝗹 𝘀𝗵𝗲𝗹𝗹 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗟𝗫𝗢𝗦 𝗗𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗶𝗼𝗻
   </p>
 </div>
 
