@@ -51,7 +51,6 @@
 
 ---
 
-<div align="center">
 
 ## **Building**
 
@@ -64,10 +63,9 @@
 - `libreadline-dev`
 
 
-<div align="center">
 
 
-Build Instructions
+### Build Instructions
 
     Clone the repository:
 
@@ -82,8 +80,7 @@ Run the shell:
 
     ./lxsh
 
-<div align="center">
-Installation
+### Set as Default
 </div>
 
 To set lxsh as your default shell:
@@ -96,7 +93,6 @@ Update your shell:
 
     chsh -s /usr/local/bin/lxsh
 
-<div align="center">
 Usage
 </div>
 
@@ -112,7 +108,6 @@ Display Help:
 
     ./lxsh --help
 
-<div align="center">
 Example ~/.lxshrc
 </div>
 
@@ -121,7 +116,6 @@ alias ll='ls -l'
 alias la='ls -a'
 HOME=$HOME
 
-<div align="center">
 Interactive Features
 </div>
 
@@ -134,8 +128,7 @@ Create ~/.inputrc:
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
 
-<div align="center">
-Example Usage
+### Example Usage
 </div>
 
 $ ./lxsh
@@ -153,8 +146,7 @@ user@machine:~$ echo $(pwd)
 /home/user
 user@machine:~$ ls *.txt > output.txt
 
-<div align="center">
-Limitations
+### Limitations
 </div>
 
     Advanced scripting features (e.g., conditionals, loops) are not fully implemented.
@@ -163,8 +155,7 @@ Limitations
 
     Some shopt options (e.g., globstar) are not supported.
 
-<div align="center">
-Contributing
+### Contributing
 </div>
 
 Contributions are welcome! To contribute:
@@ -186,17 +177,3 @@ Push to the branch:
     Open a pull request.
 
 Please report bugs or suggest features via GitHub Issues.
-<div align="center">
-License
-</div>
-
-This project is licensed under the MIT License.
-<div align="center">
-Acknowledgments
-</div>
-
-    Inspired by Bash and other Unix shells.
-
-    Built with the readline library for interactive features.
-
-    Part of the LXOS Distribution.
