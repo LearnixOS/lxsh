@@ -1,74 +1,91 @@
-<div align="center">
-  <img 
-    src="https://raw.githubusercontent.com/LearnixOS/learnixos.github.io/refs/heads/main/assets/images/logo.png" 
-    alt="LXSH Logo" 
-    width="150" 
-    style="display: block; margin: 0 auto; border: 2px solid #555; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);"
-  >
-</div>
 
-<div align="center">
   
-  <h1 style="font-size: 48px; margin-top: 20px;">
-    <a href="https://learnixos.github.io/" style="text-decoration: none; color: inherit;">
+
+
+
+  
+    
       𝗟𝗫𝗦𝗛
-    </a>
-  </h1>
-  <p style="font-size: 18px; margin-top: 10px;">
-    𝗔 𝗺𝗶𝗻𝗶𝗺𝗮𝗹 𝘀𝗵𝗲𝗹𝗹 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗟𝗫𝗢𝗦 𝗗𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗶𝗼𝗻
-  </p>
-</div>
+    
+  
+  
+    A Minimal Shell for the LXOS Distribution
+  
 
----
+      
 
-<div align="center">
 
-<h1>
-  <img src="assets/lxsh.png" align="center" alt="Preview" width="650" style="display: inline-block; margin: 0; border: 2px solid #555; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
-</h1>
 
-lxsh: A Bash-like Shell in C
-lxsh is a Unix shell written in C, designed as a lightweight bash replacement with support for scripting, job control, and interactive features.
+
+  
+
+
+Overview
+lxsh is a lightweight Unix shell written in C, designed as a minimal replacement for Bash, tailored for the LXOS Distribution. It supports scripting, job control, and interactive features, making it a versatile tool for both developers and system administrators.
 Features
 
-Configuration: Loads ~/.lxshrc, auto-created with default PS1, aliases (ll, la), and HOME.
-PS1 Prompt: Customizable with \u (user), \h (host), \w (dir, with ~ substitution). Default: \u@\h:\w\$ .
+Configuration: Automatically creates and loads ~/.lxshrc with default PS1, aliases (ll, la), and HOME.
+PS1 Prompt: Customizable with \u (user), \h (host), \w (directory with ~ substitution). Default: \u@\h:\w\$ .
 Built-in Commands: cd, echo, exit, help, set, shopt, fg, bg, jobs.
-Command Execution: Runs external programs and built-ins.
+Command Execution: Runs external programs and built-ins seamlessly.
 Scripting: Executes scripts from files.
-Environment Variables: Supports setting and expanding variables, including $?.
-Redirection: Handles >, <.
-Pipes: Supports cmd1 | cmd2.
-Job Control: Manages background (&) and foreground processes with fg, bg, jobs.
-Command History: Uses readline for history, up/down arrow navigation, Ctrl+left/right word jumping.
-Command Substitution: Supports $(command).
+Environment Variables: Supports setting and expanding variables, including $? for exit status.
+Redirection: Handles > and < for input/output redirection.
+Pipes: Supports command pipelines (cmd1 | cmd2).
+Job Control: Manages background (&) and foreground processes with fg, bg, and jobs.
+Command History: Uses readline for command history, up/down arrow navigation, and Ctrl+left/right word jumping.
+Command Substitution: Supports $(command) for inline command output.
 Globbing: Expands wildcards (*, ?, [abc]).
 Aliases: Defines shortcuts (e.g., alias ll='ls -l').
-Signal Handling: Handles SIGINT (Ctrl+C).
-Exit Status: Tracks $?.
-Error Handling: Supports set -e; trap is a placeholder.
-Shell Options: set -e, shopt with nocaseglob.
+Signal Handling: Gracefully handles SIGINT (Ctrl+C).
+Exit Status: Tracks last command status with $?.
+Error Handling: Supports set -e for exiting on errors; trap is a placeholder.
+Shell Options: Implements set -e and shopt with nocaseglob support.
 
 Building
+Prerequisites
 
-Install dependencies: gcc, make, libreadline-dev.
-On Ubuntu: sudo apt-get install libreadline-dev.
+gcc
+make
+libreadline-dev
+
+On Ubuntu/Debian:
+sudo apt-get install libreadline-dev
+
+Build Instructions
+
+Clone the repository:git clone https://github.com/LearnixOS/lxsh.git
+cd lxsh
 
 
-Run make to build lxsh.
-Run ./lxsh to start the shell.
+Build the shell:make
+
+
+Run the shell:./lxsh
+
+
 
 Installation
 To set lxsh as your default shell:
 
-Copy lxsh to /usr/local/bin.
-Run chsh -s /usr/local/bin/lxsh.
+Copy the binary to /usr/local/bin:sudo cp lxsh /usr/local/bin
+
+
+Update your shell:chsh -s /usr/local/bin/lxsh
+
+
 
 Usage
 
-Interactive: ./lxsh
-Script: ./lxsh script.sh
-Help: ./lxsh --help
+Interactive Mode:./lxsh
+
+
+Run a Script:./lxsh script.sh
+
+
+Display Help:./lxsh --help
+
+
 
 Example ~/.lxshrc
 PS1='\u@\h:\w\$ '
@@ -79,11 +96,11 @@ HOME=$HOME
 Interactive Features
 
 Up/Down Arrows: Navigate command history.
-Ctrl+Left/Right: Jump between words (requires .inputrc configuration).
-Create ~/.inputrc:"\e[1;5C": forward-word
+Ctrl+Left/Right: Jump between words (requires ~/.inputrc configuration).
+
+Create ~/.inputrc:
+"\e[1;5C": forward-word
 "\e[1;5D": backward-word
-
-
 
 Example Usage
 $ ./lxsh
@@ -103,10 +120,25 @@ user@machine:~$ ls *.txt > output.txt
 
 Limitations
 
-Advanced scripting (conditionals, loops) is not fully implemented.
-trap is a placeholder.
-Some shopt options are not supported.
+Advanced scripting features (e.g., conditionals, loops) are not fully implemented.
+The trap command is a placeholder and lacks full functionality.
+Some shopt options (e.g., globstar) are not supported.
 
 Contributing
-Contributions are welcome! Please submit pull requests or open issues on the project repository.
+Contributions are welcome! To contribute:
+
+Fork the repository.
+Create a feature branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -m 'Add your feature').
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
+
+Please report bugs or suggest features via GitHub Issues.
+License
+This project is licensed under the MIT License.
+Acknowledgments
+
+Inspired by Bash and other Unix shells.
+Built with the readline library for interactive features.
+Part of the LXOS Distribution.
 
