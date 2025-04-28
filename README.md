@@ -63,9 +63,6 @@
 - `make`
 - `libreadline-dev`
 
-**On Debian:**
-```bash
-sudo apt-get install gcc make libreadline-dev```
 
 <div align="center">
 
