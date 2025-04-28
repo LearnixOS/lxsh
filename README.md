@@ -4,6 +4,15 @@
 
 **A Minimal Shell for the LXOS Distribution**
 
+<div align="center">
+  <img 
+    src="https://raw.githubusercontent.com/LearnixOS/learnixos.github.io/refs/heads/main/assets/images/logo.png" 
+    alt="LXSH Logo" 
+    width="150" 
+    style="display: block; margin: 0 auto; border: 2px solid #555; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);"
+  >
+</div>
+
 <div style="display: flex; align-items: center; margin-bottom: 40px;">
   <div style="flex: 1; padding-right: 20px;">
     <p><strong>🚀 Resource Efficiency</strong></p>
@@ -95,7 +104,7 @@ Update your shell:
 
 
 ### Example ~/.lxshrc
-</div>
+
 
 PS1='\u@\h:\w\$ '
 alias ll='ls -l'
@@ -103,7 +112,7 @@ alias la='ls -a'
 HOME=$HOME
 
 Interactive Features
-</div>
+
 
     Up/Down Arrows: Navigate command history.
 
