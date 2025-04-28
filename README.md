@@ -93,22 +93,8 @@ Update your shell:
 
     chsh -s /usr/local/bin/lxsh
 
-Usage
-</div>
 
-    Interactive Mode:
-
-./lxsh
-
-Run a Script:
-
-./lxsh script.sh
-
-Display Help:
-
-    ./lxsh --help
-
-Example ~/.lxshrc
+### Example ~/.lxshrc
 </div>
 
 PS1='\u@\h:\w\$ '
@@ -122,11 +108,6 @@ Interactive Features
     Up/Down Arrows: Navigate command history.
 
     Ctrl+Left/Right: Jump between words (requires ~/.inputrc configuration).
-
-Create ~/.inputrc:
-
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
 
 ### Example Usage
 </div>
