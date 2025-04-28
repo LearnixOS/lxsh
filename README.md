@@ -65,8 +65,9 @@
 
 **On Debian:**
 ```bash
-sudo apt-get install gcc make libreadline-dev
+sudo apt-get install gcc make libreadline-dev```
 
+<div align="center">
 
 
 Build Instructions
